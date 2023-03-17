@@ -1,18 +1,11 @@
 ---
 layout: default
 ---
+
+{% if page.toc %}
+    {% assign contentsTitle = page.toc_title | default: 'Contents' %}
+    {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
+{% endif %}
 <div class="content">
-	<section class="page">
-		<div class="container {% if page.full_width %}max-container{% endif %}">
-			{% if page.heading %}
-				<h2>{{ page.heading }}</h2>
-			{% elsif page.title and page.layout != 'archive' %}
-				<h2>{{ page.title }}</h2>
-			{% endif %}
-			{% if page.description %}
-				<p class="subtext">{{ page.description }}</p>
-			{% endif %}
-			{{ content }}
-		</div>
-	</section>
+    {{ content }}
 </div>

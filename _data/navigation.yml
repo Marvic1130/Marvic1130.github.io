@@ -1,24 +1,19 @@
-- name: Pricing
-  link: /pricing/
-  new_window: false
-  highlight: false
+- name: Docs
+  link: /docs/
+- name: Example Pages
+  link: /#
+  dropdown:
+    - name: Landing Page With Callouts
+      link: /landing/
+    - name: Sponsors Page
+      link: /sponsors/
+    - name: Image Gallery
+      link: /gallery/
+    - name: Products
+      link: /products/
+    - name: Recipe Page
+      link: /example-recipe/
+    - name: Showcase
+      link: /showcase/
 - name: Blog
   link: /blog/
-  new_window: false
-  highlight: false
-- name: About
-  link: /about/
-  new_window: false
-  highlight: false
-- name: Contact
-  link: /contact/
-  new_window: false
-  highlight: false
-- name: Login
-  link: /
-  new_window: true
-  highlight: false
-- name: Sign Up
-  link: /
-  new_window: true
-  highlight: true

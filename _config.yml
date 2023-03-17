@@ -1,106 +1,82 @@
-# ----
-# Site
-
-title: Yeseong's Blog
+# Site Settings
+lang: kr
+title: 강예성의 코딩노트
+tagline: Bulma Clean Theme
+email: marvic1130@gmail.com
+description: >
+  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+baseurl: "/bulma-clean-theme"
 url: "https://marvic1130.github.com"
-baseurl:
-google_analytics_key:
-google_maps_javascript_api_key:
-disqus_shortname:
-
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Product marketing template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Hydra Template
-  links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
-
-# -----
-# Build
-
-timezone: Etc/UTC
-
-collections:
-  staff_members:
-    _hide_content: true
-
-paginate: 10
-paginate_path: "/blog/:num/"
 permalink: pretty
+#favicon: /path/to/favicon.png
+gh_sponsor: chrisrhymes
+#hide_share_buttons: true
+#theme_color: '#eeeeee'
+#fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: csrhymes
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+#google_analytics: UA-code-here
 
 defaults:
-  - scope:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
-      _options:
-        content:
-          width: 1500
-          height: 2500
-  - scope:
-      path: ""
-      type: "staff_members"
-    values:
-      _options:
-        image_path:
-          width: 600
-          height: 600
-  - scope:
-      path: ""
-    values:
-      layout: "page"
-  - scope:
-      path: "index.html"
-    values:
-      layout: "default"
-  - scope:
-      path: "contact.html"
-    values:
-      full_width: true
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
 
-jekyll-archives:
-  enabled:
-    - categories
+markdown: kramdown
+highlighter: rouge
 
-plugins:
-  - jekyll-archives
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-paginate
+footer_menu: example_footer_menu
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
-
-# -----------
-# CloudCannon
-
-_select_data:
-  social_icons:
-    - Facebook
-    - Instagram
-    - LinkedIn
-    - Pinterest
-    - Tumblr
-    - Twitter
-    - YouTube
-    - RSS
-
-_comments:
-  map: Update the map location and display settings.
-  latitude: Coordinates for the center marker on the map.
-  longitude: Coordinates for the center marker on the map.
-  zoom: The zoom level for the map.
-  pricing_table: Update the information in the pricing tables.
-  highlight: Emphasis the text
-  color: The background colour used in the plan name and call to action.
-  new_window: Open link in new window
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false

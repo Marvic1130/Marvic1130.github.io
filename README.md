@@ -1,80 +1,65 @@
-# Hydra
+# bulma-clean-theme
 
-Marketing site template for Jekyll. Browse through a [live demo](https://proud-alligator.cloudvent.net/).
-Increase the web presence of your brand with this configurable theme.
+[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
+![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
 
-![Hydra template screenshot](images/_screenshot.png)
+This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern-looking site to start with. 
 
-Hydra was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interactive components, such as mobile navbar and notifications.
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
+## Contents
 
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/hydra-jekyll-template)
+* [Installation](#installation)
+* [Documentation](#documentation)
+* [Contributing](#contributing)
+* [Development](#development)
+* [Licence](#licence)
 
-## Features
 
-* Contact form
-* Pre-built pages
-* Pre-styled components
-* Blog with pagination
-* Post category pages
-* Disqus comments for posts
-* Staff and author system
-* Configurable footer
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* RSS/Atom feed
-* SEO tags
-* Google Analytics
+## Installation
 
-## Setup
+Add this line to your Jekyll site's `Gemfile`:
 
-1. Add your site and author details in `_config.yml`.
-2. Add your Google Analytics and Disqus keys to `_config.yml`.
-3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
+```ruby
+gem "bulma-clean-theme"
+```
 
-## Develop
+And add this line to your Jekyll site's `_config.yml`:
 
-Hydra was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+```yaml
+theme: bulma-clean-theme
+```
 
-Install the dependencies with [Bundler](http://bundler.io/):
+If you are deploying to GitHub pages, then you can also install the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`. **Note that the GitHub Pages gem requires Jekyll version 3.9.**
 
-~~~bash
-$ bundle install
-~~~
+```yaml
+# With GitHub Pages Gem
+remote_theme: chrisrhymes/bulma-clean-theme
+```
 
-Run `jekyll` commands through Bundler to ensure you're using the right versions:
+And then execute:
 
-~~~bash
-$ bundle exec jekyll serve
-~~~
+    $ bundle
 
-## Editing
+Or install it yourself as:
 
-Hydra is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in CloudCannon.
+    $ gem install bulma-clean-theme
 
-### Posts
+## Documentation
 
-* Add, update or remove a post in the *Posts* collection.
-* The **Staff Author** field links to members in the **Staff** collection.
-* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
-* Change the defaults when new posts are created in `_posts/_defaults.md`.
+Check out the demo site for the [Documentation](https://www.csrhymes.com/bulma-clean-theme/docs/)
 
-### Contact Form
+## Contributing
 
-* Preconfigured to work with CloudCannon, but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
-* Sends email to the address listed in company details.
+Bug reports and pull requests are welcome on GitHub at https://github.com/chrisrhymes/bulma-clean-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-### Staff
+## Development
 
-* Reused around the site to save multiple editing locations.
-* Add `excluded_in_search: true` to any documentation page's front matter to exclude that page in the search results.
+To set up your environment to develop this theme, run `bundle install`.
 
-### Navigation
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Navigation* section.
+## License
 
-### Footer
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Footer* section.
