@@ -25,7 +25,7 @@ author_email: "marvic1130@gmail.com"
 author_location: Korea
 author_website_url: "https://marvic1130.github.com"
 typewrite-text: 컴퓨터공학과 학회장이 끄적이는 코딩노트
-hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+hero_cover_img: macOS_Catalina.png # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
 author_work_experiences:
