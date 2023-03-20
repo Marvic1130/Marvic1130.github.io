@@ -12,6 +12,13 @@ usemathjax: false
 permalink: /blog/adding-categories-tags-in-posts/
 ---
 
+<style>
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+
 # C언어 Chapter 1. 변수와 상수
 
 <br/>
@@ -50,7 +57,7 @@ int main(void){
 
 이 코드를 실행하면 아래와 같은 결과를 얻어올 수 있습니다.
 
-![Clang01](https://user-images.githubusercontent.com/63188145/226181926-1b59c770-27b2-4d1a-b9a9-6a7a55933346.png)
+<img src="https://user-images.githubusercontent.com/63188145/226181926-1b59c770-27b2-4d1a-b9a9-6a7a55933346.png" style="max-width:100%; height:auto;">
 
 ### 코드 설명
 
@@ -225,7 +232,7 @@ c언어를 열심히 공부해 볼까요? */
 
 <br/>
 
-### 변수란?
+### 변수(Variable)
 
 먼저 변수란 프로그램에서 값들이 저장되는 공간을 변수(Variable)이라고 합니다.
 
@@ -241,7 +248,7 @@ int n;
 
 이 상자에 int형식을 가지는 값을 넣겠다고 선언하는 것입니다.
 
-![SE-d5606106-57f7-40e9-b744-a77098fdf2b4](https://user-images.githubusercontent.com/63188145/226188605-8f4eb58b-37d7-4eb2-9aeb-c0cb6c897740.png)
+<img src="https://user-images.githubusercontent.com/63188145/226188605-8f4eb58b-37d7-4eb2-9aeb-c0cb6c897740.png" style="max-width:100%; height:auto;">
 
 <br/>
 
@@ -262,6 +269,8 @@ int n;
 문자형은 char 하나밖에 없습니다.
 
 <br/>
+
+### 변수 선언하기
 
 그러면 여러 가지 형식의 변수를 선언해 보겠습니다.
 
@@ -365,6 +374,8 @@ void // c언어 키워드 사용
 
 프로그래밍에서는 상수라는 용어를 다른 의미로 쓰기 때문에 리터럴이라고 말합니다.)
 
+### 변수 초기화
+
 ```c
 #include <stdio.h>
 
@@ -397,5 +408,127 @@ int main(){
 
 그럼 실행해 보겠습니다.
 
-<img src="https://user-images.githubusercontent.com/63188145/226190139-45d87aa6-c3cf-4a2c-9292-15b81f0c8535.png" width="auto" height="auto">
+<img src="https://user-images.githubusercontent.com/63188145/226190139-45d87aa6-c3cf-4a2c-9292-15b81f0c8535.png">
 
+이렇게 0, 3.14, A 가 잘 출력되는것을 볼 수 있습니다.
+
+이때 printf 안에 들어간 %d, %g, %c는 변수를 출력할 때
+
+어떤 형식으로 출력할 건지 결정하는 형식 지정자입니다.
+
+%d는 정수형 %g는 실수형 %c는 문자형입니다.
+
+<br/>
+
+그리고 변수의 초기화를 생성과 동시에 할 수도 있습니다.
+
+이번엔 변수의 생성과 초기화를 한 후 다른 값으로 바꿔보겠습니다.
+
+<br/>
+
+아래와 같이 입력하고 실행해 줍니다.
+
+```c
+#include <stdio.h>
+
+int main(){
+    // 변수 선언 및 초기화
+    int n = 0;
+    double d = 3.14;
+    char c = 'A';
+
+    printf("%d, %lf, %c\n", n, d, c); // 변수 출력
+    
+    //변수 초기화
+    n = 3;
+    d = 0;
+    c = 'a';
+
+    printf("%d, %lf, %c\n", n, d, c); // 변수 출력
+    return 0;
+}
+```
+
+이번에는 실수 형식 지정자를 %lf로 바꿔 봤습니다.
+
+출력해보시면 %g 와 무엇이 다른지 알 수 있습니다.
+
+보통 실수 형식 지정자는 %lf를 주로 사용합니다.
+
+저는 %g가 보기에 더 깔끔해서 %g를 선호합니다.
+
+(형식 지정자도 다음 포스팅 때 더 알아보겠습니다.)
+
+<img src="https://user-images.githubusercontent.com/63188145/226232092-19c9022e-adc0-4af9-b7a8-198e66dc8cfa.png">
+
+%lf는 기본적으로 소수점 뒤 6자리(조절 가능)를 출력하고
+
+%g는 불필요한 자리수는 날려버립니다.
+
+<br/>
+
+이렇게 변수는 이렇게 저장되어 있는 값을 변경 가능하다는 특징을 가지고 있습니다.
+
+***
+
+### 상수(Constant)
+
+상수는 변수와 비슷한데  한 가지가 다릅니다.
+
+상수는 초기화한 후 다른 값으로 변경이 불가능합니다.
+
+### 상수 선언 방법 1. #define
+
+첫 번째 방법은 #define 을 사용하는 방법입니다.
+
+#define 문장은 코드의 맨 첫 부분 #include가 있는 부분에 선언을 해줍니다.
+
+(저는 보통 #include 밑에 선언합니다.)
+
+이렇게 #이 붙은 명령어는 전처리기가 처리합니다.
+
+그리고 #을 전처리기 지시자라고 부릅니다.
+
+그러면 #define 을 언제 사용하는지 알려드리겠습니다.
+
+```c
+#include <stdio.h>
+
+int main(){
+    int usd = 5;
+    double krw = 1182.5 * usd; // 2020년 9월 14일 환율 == 1182.5원
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    usd = 4;
+    krw = 1182.5 * usd; // 2020년 9월 14일 환율 == 1182.5원
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    usd = 3;
+    krw = 1182.5 * usd; // 2020년 9월 14일 환율 == 1182.5원
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    usd = 2;
+    krw = 1182.5 * usd; // 2020년 9월 14일 환율 == 1182.5원
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    return 0;
+}
+```
+
+이런 프로그램이 실행이 될 때
+
+환율의 값은 바뀌지 않습니다.
+
+그런데 다음날이 되어서 환율이 바뀐다면 1182.5라는 숫자를 찾아서 수정해야 하는 번거로움이 있습니다.
+
+<br/>
+
+실제 프로그래밍을 하다가 설계 미스 혹은 오타로 저렇게 값을 일일이
+
+수정한다고 하면 분명히 빠트릴 수 있습니다.
+
+그래서 이런 값들은 상수로 선언하는 것이 좋습니다.
+
+<br/>
+
+그리고 이런 이유뿐만이 아니라 변경되면 안 되는 값이 변경이 될 위험도 있기 때문에 상수를 선언해 줍니다.
