@@ -532,3 +532,149 @@ int main(){
 <br/>
 
 그리고 이런 이유뿐만이 아니라 변경되면 안 되는 값이 변경이 될 위험도 있기 때문에 상수를 선언해 줍니다.
+
+<br/>
+
+아래와 같이 입력해 줍니다.
+
+```c
+#include <stdio.h>
+#define EXCHANGE_RATE 1128.5 // 2020년 9월 14일 환율 == 1182.5원
+
+int main(){
+    int usd = 5;
+    double krw = EXCHANGE_RATE * usd;
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    usd = 4;
+    krw = EXCHANGE_RATE * usd;
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    usd = 3;
+    krw = EXCHANGE_RATE * usd;
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    usd = 2;
+    krw = EXCHANGE_RATE * usd;
+    printf("%d달러는 %g원 입니다.\n", usd, krw);
+
+    return 0;
+}
+```
+const는 자료형 앞에 와야 하고 선언과 동시에 초기화를 해야 합니다.
+
+<img src="https://user-images.githubusercontent.com/63188145/226284526-c5afb003-2369-4009-b852-8475ec919e36.png">
+
+이렇게 상수를 선언할 때 보통 식별자로 대문자 스네이크 케이스를 사용합니다.
+
+상수를 사용하면 그 문장이 무엇을 의미하는지 더 쉽게 알 수 있습니다.
+
+### const 연산자
+
+상수를 선언하는 두 번째 방법은 const를 사용하는 방법입니다.
+
+const는 constant의 약자로 변경할 수 없다는 뜻입니다.
+
+<img src="https://user-images.githubusercontent.com/63188145/226285710-4de92b16-64ce-444e-a8ec-719ab2687990.png">
+
+이렇게 변수와 상수에 대해 알아봤습니다. 
+
+***
+
+## 환율 계산기 만들기
+
+이것을 이용해서 간단한 프로그램을 만들어 보겠습니다.
+
+scanf() 함수를 사용해서 환율과 금액을 입력받고,
+
+환율을 상수로 선언한 뒤(const를 활용하기 위해),
+
+몇 달러인지 출력하는 프로그램을 먼저 만들어 보겠습니다.
+
+먼저 메인 함수와 헤더를 세팅합니다.
+
+```c
+#include <stdio.h>
+
+int main(){
+
+    return 0;
+}
+```
+
+환율을 입력받을 변수 in_exc를 선언하고
+
+scanf()로 입력을 받아보겠습니다.
+
+여기서 상수를 사용하지 않은 이유는 const 상수는
+
+선언과 동시에 초기화를 해줘야 하기 때문에 먼저 변수로 입력받은 후에
+
+상수를 선언할 예정입니다.
+
+```c
+#include <stdio.h>
+
+int main(){
+    double in_exc; // 환율을 입력받을 변수 선언
+    scanf("%lf", &in_exc); // scanf()함수를 이용하여 환율을 입력받음
+    
+    return 0;
+}
+```
+
+scanf() 함수는 형식 지정자에 맞는 값을 입력을 받고
+
+뒤에 있는 변수에  값을 넣어줍니다.
+
+&in_exc에서 &는 주소 연산자로 in_exc의 주소로 입력값을 넣어줍니다.
+
+주소 연산자도 나중에 배울 겁니다.
+
+그다음 환율을 상수로 선언하고
+
+그 외 필요한 변수를 선언하겠습니다.
+
+```c
+#include <stdio.h>
+
+int main(){
+    double in_exc; // 환율을 입력받을 변수 선언
+    scanf("%lf", &in_exc); // scanf()함수를 이용하여 환율을 입력받음
+    const double EXCHANGE_RATE = in_exc; // 환율을 상수로 선언
+    
+    int krw; // 금액을 입력받을 변수 선언
+    double usd; // 달러 변수 선언
+    scanf("%d", &krw); // 금액을 입력받아서 초기화
+
+    usd = krw / EXCHANGE_RATE;
+    
+    return 0;
+}
+```
+
+이렇게 변수 세팅은 끝났습니다.
+
+printf() 함수를 사용하여 결과값을 볼 수 있도록 합니다.
+
+```c
+#include <stdio.h>
+
+int main(){
+    double in_exc; // 환율을 입력받을 변수 선언
+    printf("USD 환율을 입력해 주세요:"); 
+    scanf("%lf", &in_exc); // scanf()함수를 이용하여 환율을 입력받음
+    const double EXCHANGE_RATE = in_exc; // 환율을 상수로 선언
+    
+    int krw; // 금액을 입력받을 변수 선언
+    double usd; // 달러 변수 선언
+    printf("환전할 KRW 금액을 입력해 주세요:");
+    scanf("%d", &krw); // 금액을 입력받아서 초기화
+
+    usd = krw / EXCHANGE_RATE; // usd 초기화 '/' 는 나누기 입니다
+    printf("%dKRW은 %.2lfUSD입니다\n", krw, usd); // usd를 소수점 밑 2자리까지 출력
+    return 0;
+}
+```
+
+<img src="https://user-images.githubusercontent.com/63188145/226287158-15497117-3281-41bc-b5da-29c1db8e8bf4.png">
