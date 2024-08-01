@@ -1,0 +1,11 @@
+- name: Arduino
+  percentage: 80
+  color: info
+
+- name: PyTorch
+  percentage: 65
+  color: success
+
+- name: TensorFlow
+  percentage: 60
+  color: warning
