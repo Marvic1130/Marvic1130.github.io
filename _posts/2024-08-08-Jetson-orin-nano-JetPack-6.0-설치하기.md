@@ -1,6 +1,6 @@
 ---
 title: Jetson Orin Nano JetPack 6.0 설치하기
-tags: [Jetson orin, Embedded System, SBC]
+tags: [Jetson orin nano tutorial, Jetson orin, Embedded System, SBC]
 style: fill
 color: primary
 description: Jetson orin nano setting
