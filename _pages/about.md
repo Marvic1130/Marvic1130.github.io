@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. Student at <a href='https://gsi.yonsei.ac.kr' target='_blank'>Graduate School of Information, Yonsei University</a>
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>yskang@yonsei.ac.kr</p>
+    <p>Daily Lab, Yonsei University</p>
+    <p>Seoul, South Korea</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Ph.D. student at the Graduate School of Information, Yonsei University, advised by Professor Woongsub Lee in the [Daily Lab](https://sites.google.com/view/dail-y).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am interested in making deep learning practical for **AIoT** and **Physical AI** — where intelligence runs not in the cloud, but directly on physical devices in the real world. AIoT devices such as SBCs and MCUs are severely resource-constrained, which makes deploying standard deep learning models infeasible. My research addresses this from two angles:
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+- **Model compression & TinyML**: compressing deep learning models to run on low-power devices, including MCU-class hardware with kilobytes of memory.
+- **AIoT-aware Federated Learning**: redesigning federated learning to account for the heterogeneity and resource constraints inherent in AIoT systems, enabling collaborative training without centralizing sensitive data.
+
+Ultimately, my goal is to unite these two directions — building a federated learning framework where lightweight, compressed models are trained and deployed collaboratively across heterogeneous AIoT devices, and validating it through real implementations on actual hardware.
+
+Feel free to reach out at [yskang@yonsei.ac.kr](mailto:yskang@yonsei.ac.kr).
