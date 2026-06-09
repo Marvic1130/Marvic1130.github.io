@@ -117,7 +117,7 @@ $$\mathbf{g}_t = \sum_{n \in \mathcal{S}_t} \frac{D_n}{D_{\mathcal{S}_t}} \left[
 For unseen clients (zero-shot), pFedHALO achieves **84.89%** accuracy on FEMNIST using only data statistics — with a gap to in-distribution clients of only 3.2–4.4%p (vs. pFedHN's 9.7%p).
 
 {% include figure.liquid path="assets/img/projects/pfedhalo/cold_start_femnist.png" title="Cold-Start Accuracy" class="img-fluid rounded z-depth-1" %}
-<div class="caption">콜드스타트 정확도 비교 (FEMNIST, 신규 100 writers, 제로샷)</div>
+<div class="caption">Zero-shot cold-start accuracy comparison on FEMNIST (100 unseen writers).</div>
 
 ---
 
