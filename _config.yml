@@ -7,16 +7,16 @@ first_name: Yeseong
 middle_name: 
 last_name: Kang
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the best way to reach me. I'm always glad to talk about on-device
+  learning, TinyML, or federated learning on real hardware.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Ph.D. student at Graduate School of Information, Yonsei University.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: federated learning, TinyML, AIoT, model compression, edge AI, on-device learning, Yeseong Kang # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🔌 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://Marvic1130.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
