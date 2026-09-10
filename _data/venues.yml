@@ -2,25 +2,26 @@
 # Used by _layouts/bib.liquid. An entry with no `color` falls back to
 # --global-theme-color; entries not listed here render a plain badge.
 #
-# Badge text is forced to white on linked badges (_sass/_base.scss), so any
-# color set here must stay dark enough to keep that text readable.
+# Badge text is forced to white on linked badges (_sass/_base.scss), so every
+# color here is checked to keep at least a 4.5:1 contrast ratio against white.
+# Each is the venue's own brand color, taken from its logo or site CSS.
 
 "IEEE TVT":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=25
-  color: "#00629B" # IEEE brand blue
+  color: "#00629B" # IEEE brand blue — 6.52:1
 
 "JKIICE":
   url: https://kiice.org/homepage/custom/jkiice
-  color: "#6C757D"
+  color: "#0079BE" # KIICE logo blue (#0082CE), darkened to reach 4.69:1
 
 "KIECS":
   url: https://kiecs.jams.or.kr/
-  color: "#6C757D"
+  color: "#192C92" # KIECS logo indigo — 11.56:1
 
 "IEIE2026":
   url: https://www.theieie.org/
-  color: "#6C757D"
+  color: "#123466" # IEIE site navy (footer / active nav) — 12.29:1
 
 "IEIE2025":
   url: https://www.theieie.org/
-  color: "#6C757D"
+  color: "#123466" # IEIE site navy (footer / active nav) — 12.29:1
