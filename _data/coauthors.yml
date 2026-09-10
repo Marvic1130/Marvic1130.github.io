@@ -1,6 +1,8 @@
-# Maps a co-author's last name (lowercase) to their full-name variants and a link.
-# Used by _layouts/bib.liquid to hyperlink co-author names in the publication list.
-# Example:
-# "lee":
-#   - firstname: ["Woongsup", "W."]
-#     url: https://example.com
+# Maps a co-author's last name (lowercase) to their first-name variants and a link.
+# _layouts/bib.liquid looks up `site.data.coauthors[<downcased last name>]`, then
+# matches `firstname contains <author.first>` — an EXACT element match, so every
+# romanization that appears in _bibliography/papers.bib must be listed.
+
+"lee":
+  - firstname: ["Woongsup", "Woongsub", "Woong-Sup"]
+    url: https://scholar.google.com/citations?user=TDPk-HkAAAAJ

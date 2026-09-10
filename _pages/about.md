@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. student at the Graduate School of Information, Yonsei University, advised by Professor Woongsub Lee in the [Daily Lab](https://sites.google.com/view/dail-y).
+I am a Ph.D. student at the Graduate School of Information, Yonsei University, advised by Professor Woongsup Lee in the [Daily Lab](https://sites.google.com/view/dail-y).
 
 I am interested in making deep learning practical for **AIoT** and **Physical AI** — where intelligence runs not in the cloud, but directly on physical devices in the real world. AIoT devices such as SBCs and MCUs are severely resource-constrained, which makes deploying standard deep learning models infeasible. My research addresses this from two angles:
 
