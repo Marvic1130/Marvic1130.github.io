@@ -21,7 +21,6 @@ nav_order: 2
 <br>
 <br>
 
-
 <h2 class="category">Domestic Journal</h2>
 
 {% bibliography --query @*[category=domestic-journal] %}

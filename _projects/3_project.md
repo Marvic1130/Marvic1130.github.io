@@ -9,7 +9,7 @@ toc:
   sidebar: left
 ---
 
-*Deep Learning-based UAV Positioning under Blockage-Aware Channels with Embedded Validation* — Yeseong Kang and Woongsup Lee, under review at **IEEE Transactions on Vehicular Technology**.
+_Deep Learning-based UAV Positioning under Blockage-Aware Channels with Embedded Validation_ — Yeseong Kang and Woongsup Lee, under review at **IEEE Transactions on Vehicular Technology**.
 
 Where should a UAV-mounted aerial base station (ABS) hover to serve ground users best, when buildings keep cutting the links? This work answers that with a deep neural network that runs on the drone itself, in under a millisecond.
 
@@ -21,7 +21,7 @@ That realism comes at a cost. Link classification switches discretely between Lo
 
 ## Approach
 
-**Placement by a single forward pass.** A tailored MLP takes the min–max normalized ground-user coordinates and outputs the ABS's horizontal position. A sigmoid followed by an affine map into the deployment area means the predicted coordinates satisfy the region constraints *by construction* — no projection or post-processing step. The network is an input projection to 1,024 dimensions, four fully connected hidden layers of 1,024 units with batch normalization, PReLU, and dropout, then a 2D output.
+**Placement by a single forward pass.** A tailored MLP takes the min–max normalized ground-user coordinates and outputs the ABS's horizontal position. A sigmoid followed by an affine map into the deployment area means the predicted coordinates satisfy the region constraints _by construction_ — no projection or post-processing step. The network is an input projection to 1,024 dimensions, four fully connected hidden layers of 1,024 units with batch normalization, PReLU, and dropout, then a 2D output.
 
 **Training without labels.** Optimal placements cannot be labeled at scale under this channel model, so training is unsupervised against the objective itself: the loss is the negative average SE. To make that loss differentiable, the hard LoS/NLoS switch is replaced by a smooth two-state mixture weighted by a soft LoS factor
 
@@ -36,12 +36,12 @@ where $$\tilde{d}_k$$ is the minimum distance from the ABS–user link to obstac
 Evaluated on a 200 × 200 m² urban site with seven obstacles (six cuboidal buildings, one cylinder) at heights of 10–70 m, against three baselines: blockage-aware grid search at 0.1 m resolution (a near-upper-bound reference), centroid-based placement, and probabilistic LoS-based sampling.
 
 | Ground users ($$H$$ = 70 m) | Grid search | Centroid | Prob. LoS | **Ours** |
-|---|---|---|---|---|
-| $$K$$ = 2 | 6.43 | 5.52 | 5.84 | **6.39** |
-| $$K$$ = 4 | 5.80 | 4.93 | 5.31 | **5.70** |
-| $$K$$ = 6 | 5.53 | 4.71 | 5.12 | **5.41** |
+| --------------------------- | ----------- | -------- | --------- | -------- |
+| $$K$$ = 2                   | 6.43        | 5.52     | 5.84      | **6.39** |
+| $$K$$ = 4                   | 5.80        | 4.93     | 5.31      | **5.70** |
+| $$K$$ = 6                   | 5.53        | 4.71     | 5.12      | **5.41** |
 
-*Average SE in bps/Hz.*
+_Average SE in bps/Hz._
 
 The proposed network stays within **0.6–2.2%** of exhaustive grid search across the tested user counts, and within 1.3–2.0% across altitudes — at least 97.8% of the reference. Centroid placement, which ignores geometry entirely, gives up 14–15%; probabilistic LoS sampling lands 7–9% short. SE heatmaps show why the small gap holds even when the two placements are far apart: the network often picks a different near-optimal basin rather than a worse one.
 
@@ -49,13 +49,13 @@ The proposed network stays within **0.6–2.2%** of exhaustive grid search acros
 
 The point of a lightweight model is that it runs where the UAV is, so the inference pipeline was benchmarked on five single-board computers across PyTorch, TensorFlow Lite, and TensorRT.
 
-| Device | Best latency | Runtime | PyTorch (FP32) |
-|---|---|---|---|
-| Raspberry Pi 5 | **0.24 ms** | TFLite INT8 | 9.02 ms |
-| Jetson Orin Nano (MaxN) | **0.27 ms** | TFLite INT8 | 1.71 ms |
-| Raspberry Pi 4 | 1.04 ms | TFLite INT8 | 18.20 ms |
-| Arduino Portenta X8 | 2.47 ms | TFLite INT8 | 19.12 ms |
-| Jetson Nano (MaxN) | 1.10 ms | TensorRT | 3.24 ms |
+| Device                  | Best latency | Runtime     | PyTorch (FP32) |
+| ----------------------- | ------------ | ----------- | -------------- |
+| Raspberry Pi 5          | **0.24 ms**  | TFLite INT8 | 9.02 ms        |
+| Jetson Orin Nano (MaxN) | **0.27 ms**  | TFLite INT8 | 1.71 ms        |
+| Raspberry Pi 4          | 1.04 ms      | TFLite INT8 | 18.20 ms       |
+| Arduino Portenta X8     | 2.47 ms      | TFLite INT8 | 19.12 ms       |
+| Jetson Nano (MaxN)      | 1.10 ms      | TensorRT    | 3.24 ms        |
 
 Every platform reaches millisecond-level latency, including the CPU-only boards. Quantization costs almost nothing in solution quality — the largest SE deviation from FP32 was $$1.415 \times 10^{-3}$$ bps/Hz, or **0.0182%**, with TFLite INT8.
 

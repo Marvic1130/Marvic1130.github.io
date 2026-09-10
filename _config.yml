@@ -4,7 +4,7 @@
 
 title: Yeseong Kang # the website title (if blank, full name will be used instead)
 first_name: Yeseong
-middle_name: 
+middle_name:
 last_name: Kang
 contact_note: >
   Email is the best way to reach me. I'm always glad to talk about on-device
@@ -622,4 +622,3 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-
