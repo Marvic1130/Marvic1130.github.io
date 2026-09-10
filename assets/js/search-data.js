@@ -44,19 +44,17 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-graduated-with-a-m-s-in-information-systems-from-yonsei-university",
+        },{id: "news-graduated-with-a-m-s-in-information-systems-from-yonsei-university",
           title: 'Graduated with a M.S. in Information Systems from Yonsei University.',
           description: "",
           section: "News",},{id: "news-started-ph-d-program-in-information-systems-at-yonsei-university",
           title: 'Started Ph.D. program in Information Systems at Yonsei University.',
           description: "",
-          section: "News",},{id: "news-submitted-a-paper-to-ieee-internet-of-things-journal-under-review",
-          title: 'Submitted a paper to IEEE Internet of Things Journal (under review).',
+          section: "News",},{id: "news-submitted-an-extended-version-of-my-m-s-thesis-work-to-an-international-conference-under-review",
+          title: 'Submitted an extended version of my M.S. thesis work to an international conference...',
+          description: "",
+          section: "News",},{id: "news-submitted-a-paper-to-ieee-transactions-on-vehicular-technology-under-review",
+          title: 'Submitted a paper to IEEE Transactions on Vehicular Technology (under review).',
           description: "",
           section: "News",},{id: "projects-aiot-llm-system-for-disaster-environments",
           title: 'AIoT-LLM System for Disaster Environments',
@@ -68,14 +66,14 @@ ninja.data = [{
           description: "Hyundai Motor Company · Mar. 2025 ~ present",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-deep-learning-based-uav-positioning-under-blockage-aware-channels-with-embedded-validation",
-          title: 'Deep Learning-based UAV Positioning under Blockage-Aware Channels with Embedded Validation',
-          description: "IEEE Internet of Things Journal · Under Review",
+            },},{id: "projects-blockage-aware-uav-positioning",
+          title: 'Blockage-Aware UAV Positioning',
+          description: "Deep learning-based aerial base station placement with embedded validation · IEEE TVT (under review)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-pfedhalo-communication-efficient-personalized-federated-learning-for-resource-constrained-aiot",
-          title: 'pFedHALO: Communication-Efficient Personalized Federated Learning for Resource-Constrained AIoT',
-          description: "M.S. Thesis · IEIE 2026 · AAAI 2027 (planned)",
+            },},{id: "projects-pfedhalo",
+          title: 'pFedHALO',
+          description: "Personalized federated learning for resource-constrained AIoT · M.S. Thesis · IEIE 2026 · under review at an international conference",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{
