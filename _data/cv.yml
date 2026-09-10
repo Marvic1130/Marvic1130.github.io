@@ -5,20 +5,49 @@
       value: Yeseong Kang
     - name: Date of Birth
       value: 2nd Feb. 2000
+    - name: Position
+      value: Ph.D. Student, Graduate School of Information, Yonsei University
+    - name: Email
+      value: yskang@yonsei.ac.kr
+    - name: Location
+      value: Seoul, South Korea
     - name: Languages
       value: Korean (native), English (intermediate)
+    - name: Links
+      links:
+        - name: Website
+          link: https://marvic1130.github.io
+        - name: Google Scholar
+          link: https://scholar.google.com/citations?user=fhRm0nUAAAAJ
+        - name: ORCID
+          link: https://orcid.org/0009-0001-4984-8921
+        - name: GitHub
+          link: https://github.com/Marvic1130
+
+- title: Research Summary
+  type: text
+  contents: >
+    Ph.D. student at the Graduate School of Information, Yonsei University.
+    My research focuses on model compression, TinyML, and AIoT-aware federated learning —
+    with the goal of enabling efficient, collaborative AI on resource-constrained IoT devices.
 
 - title: Education
   type: time_table
   contents:
     - title: Ph.D. in Information Systems
-      institution: Graduate School of Information, Yonsei University, Seoul, South Korea
+      institution: Graduate School of Information, Yonsei University
+      location: Seoul, KR
       year: 2026 ~ present
     - title: M.S. in Information Systems
-      institution: Graduate School of Information, Yonsei University, Seoul, South Korea
+      institution: Graduate School of Information, Yonsei University
+      location: Seoul, KR
       year: 2024 - 2026
       description:
         - "Thesis: pFedHALO: AIoT-Aware Personalized Federated Learning with Hypernetwork-Adaptive Low-Rank Optimization in Resource-Constrained Environments"
+    - title: B.S. in Computer Engineering
+      institution: Hansei University
+      location: Gyeonggi, KR
+      year: 2020 - 2024
 
 - title: Teaching Experience
   type: time_table
@@ -36,6 +65,33 @@
         - IoT 서비스 빅데이터 분석 (2024, 2025)
         - IoT Foundation III (2024)
         - 인공지능기반 사물인터넷 최적화 (2024)
+
+- title: Research Projects
+  type: time_table
+  contents:
+    - title: AIoT-LLM System for Disaster Environments
+      institution: IITP, Leading Generative AI Human Resources Development
+      year: 2024 ~ present
+    - title: Development of Image Fusion Technology for Improving Deteriorated Gas Sensor Performance
+      institution: Hyundai Motor Company
+      year: 2025 ~ present
+
+- title: Skills
+  type: list_groups
+  contents:
+    - category: Programming Languages
+      icon: fa-solid fa-code
+      items:
+        - name: Python
+        - name: C
+        - name: C++
+    - category: Frameworks & Tools
+      icon: fa-solid fa-screwdriver-wrench
+      items:
+        - name: PyTorch
+        - name: TensorFlow Lite
+        - name: Arduino
+        - name: ESP-IDF
 
 - title: Academic Interests
   type: nested_list
