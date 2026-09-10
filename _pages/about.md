@@ -13,7 +13,7 @@ profile:
     <p>Daily Lab, Yonsei University</p>
     <p>Seoul, South Korea</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # set to true once a paper is marked selected={true} in papers.bib
 social: true # includes social icons at the bottom of the page
 
 announcements:
