@@ -1,7 +1,7 @@
 ---
 layout: page
 title: pFedHALO
-description: Personalized federated learning for resource-constrained AIoT · M.S. Thesis · IEIE 2026 · extended version under review
+description: Personalized federated learning for resource-constrained AIoT · M.S. Thesis · IEIE 2026 · under review at an international conference
 img:
 importance: 1
 category: personal
@@ -15,7 +15,7 @@ A server-side hypernetwork generates client-specific low-rank adapters condition
 
 - M.S. Thesis, Yonsei University (2026)
 - 대한전자공학회 학술대회, IEIE (Jun. 2026)
-- Extended version currently under review — venue and paper title withheld while review is in progress
+- Extended version under review at an international conference — venue and paper title withheld while review is in progress
 
 ---
 
@@ -28,4 +28,4 @@ A server-side hypernetwork generates client-specific low-rank adapters condition
 - **클라이언트 동작**: 생성된 어댑터를 로컬 베이스 모델에 한 번 융합 → 자신의 데이터로 미세조정 → 압축된 업데이트만 업로드
 - **효과**: 개인화 생성 부담이 서버에 있어 클라이언트의 통신량과 연산량을 동시에 절감
 - **콜드 스타트**: 클라이언트별 학습 임베딩 대신 집계 통계만을 조건으로 사용. 학습된 하이퍼네트워크로 학습 미참여 클라이언트까지 개인화 가능
-- **현황**: 석사학위논문(2026), 대한전자공학회 학술대회(2026) 발표 완료. 확장 버전 심사 중 — 심사 기간 중 논문 제목·투고 학회 비공개
+- **현황**: 석사학위논문(2026), 대한전자공학회 학술대회(2026) 발표 완료. 확장 버전 국제 학술대회 심사 중 — 심사 기간 중 논문 제목·투고 학회 비공개
