@@ -63,7 +63,7 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-development-of-image-fusion-technology-for-improving-deteriorated-gas-sensor-performance",
           title: 'Development of Image Fusion Technology for Improving Deteriorated Gas Sensor Performance',
-          description: "Hyundai Motor Company · Mar. 2025 ~ present",
+          description: "Hyundai Motor Company · Mar. 2025 - Jun. 2026",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-blockage-aware-uav-positioning",
